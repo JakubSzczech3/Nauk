@@ -1,0 +1,57 @@
+<html>
+<head>
+<style>
+input {
+  background-color: #3CBC8D;
+   color: white;
+   width: 150px;
+}
+input[type=radio]{
+  width: 10px;
+}
+td{
+
+}
+tr{
+}
+</style>
+</head>
+<body>
+
+<!--    Formularz z walidacja wbudowana
+<form action="" method="post">
+<table>
+<tr><td>Imię:</td><td> <input type="text" required /></td></tr>
+<tr><td>Nazwisko:</td><td> <input type="text" required /></td></tr>
+<tr><td>Email:</td><td> <input type="email" required /></td></tr>
+<tr><td>Hasło:</td><td> <input type="password" required /></td></tr>
+<tr><td><p>Płeć:<p></td>
+<td><input type="radio" id="k" name="plec" required> Kobieta</td><td>
+<input type="radio" id="m" name="plec" required> Mężczyzna</td></tr>
+<tr><td>Telefon:</td><td> <input type="tel" required /></td></tr>
+<tr><td>Data Urodzenia:</td><td> <input type="date" required /></td></tr>
+<tr><td>Kraj:</td><td> <input type="text" required /></td></tr>
+<tr><td></td><td><input type="Submit" value="Zapisz" /></td></tr>
+</table>
+</form>
+-->
+
+<form onsubmit="walidacja()">
+<table>
+<tr><td>Imię:</td><td> <input type="text" id="imie" /></td></tr>
+<tr><td>Nazwisko:</td><td> <input type="text" id="nazwisko" /></td></tr>
+<tr><td>Email:</td><td> <input type="text" id="email" /></td></tr>
+<tr><td>Hasło:</td><td> <input type="password" id="haslo" /></td></tr>
+<tr><td><p>Płeć:<p></td>
+<td><input type="radio" id="kob" name="plec" > Kobieta</td><td>
+<input type="radio" id="men" name="plec" > Mężczyzna</td></tr>
+<tr><td>Telefon:</td><td> <input type="tel" id="telefon" /></td></tr>
+<tr><td>Data Urodzenia:</td><td> <input type="date" id="data" /></td></tr>
+<tr><td>Kraj:</td><td> <input type="text" id="kraj" /></td></tr>
+<tr><td></td><td><input type="Submit" value="Zapisz" /></td></tr>
+</table>
+</form>
+</body>
+<script src="script.js"> </script>
+</html>
+
