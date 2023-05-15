@@ -36,9 +36,9 @@ tr{
 </form>
 -->
 
-<form onsubmit="walidacja()">
+<form onsubmit="walidacja(this)">
 <table>
-<tr><td>Imię:</td><td> <input type="text" id="imie" /></td></tr>
+<tr><td>Imię:</td><td> <input type="text" id="imie" required /></td></tr>
 <tr><td>Nazwisko:</td><td> <input type="text" id="nazwisko" /></td></tr>
 <tr><td>Email:</td><td> <input type="text" id="email" /></td></tr>
 <tr><td>Hasło:</td><td> <input type="password" id="haslo" /></td></tr>
@@ -54,4 +54,3 @@ tr{
 </body>
 <script src="script.js"> </script>
 </html>
-

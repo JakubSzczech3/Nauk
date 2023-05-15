@@ -1,17 +1,21 @@
-function walidacja() {
+function walidacja(form) {
 email1=email.value;
 has=haslo.value
-if (imie.value == "")
-alert("Podaj poprawne imie")
-else if (nazwisko.value == "")
-alert("Podaj poprawne nazwisko")
-else if (email.value == "")
-alert("Podaj poprawny email")
-else if (email1.includes("@")== false){
-alert("Podaj poprawny email")
+imie=imie.value
+if (imie.value==""){
+imie.value.setCustomValidity("Podaj imię")
 }
-else if (haslo.value == "" || has.length < 8 )
-alert("Podaj poprawne hasło dłuższe niż 8 znaków")
-console.log(kob.value)
-console.log(men.value)
+
+else if (nazwisko.value == ""){
+}
+else if (email.value == ""){
+}
+else if (email1.includes("@")== false){
+
+}
+else if (haslo.value == "" || has.length < 8 ){
+}
+else if ((form.plec[0].checked == false) && (form.plec[1].checked == false)){
+}
+else alert("Formularz jest poprawny")
 }
