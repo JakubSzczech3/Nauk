@@ -1,21 +1,19 @@
 function walidacja(form) {
 email1=email.value;
 has=haslo.value
-imie=imie.value
-if (imie.value==""){
-imie.value.setCustomValidity("Podaj imię")
+if (imie.value ==""){
+	alert("MNikeros")
+ imie.setCustomValidity("Thats too high!");
 }
-
-else if (nazwisko.value == ""){
+if (nazwisko.value ==""){
+alert("xD")
 }
-else if (email.value == ""){
+if (email.value == ""){
 }
-else if (email1.includes("@")== false){
-
+if (email1.includes("@")== false){
 }
-else if (haslo.value == "" || has.length < 8 ){
+if (haslo.value == "" || has.length < 8 ){
 }
-else if ((form.plec[0].checked == false) && (form.plec[1].checked == false)){
+if ((form.plec[0].checked == false) && (form.plec[1].checked == false)){
 }
-else alert("Formularz jest poprawny")
 }
