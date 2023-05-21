@@ -10,7 +10,7 @@ input[type=radio]{
   width: 10px;
 }
 td{
-
+width: 300px;
 }
 tr{
 }
@@ -24,7 +24,7 @@ tr{
 <tr><td>Imię:</td><td> <input type="text" required /></td></tr>
 <tr><td>Nazwisko:</td><td> <input type="text" required /></td></tr>
 <tr><td>Email:</td><td> <input type="email" required /></td></tr>
-<tr><td>Hasło:</td><td> <input type="password" required /></td></tr>
+<tr><td>Hasło:</td><td> <input type="password" required minlength="8" /></td></tr>
 <tr><td><p>Płeć:<p></td>
 <td><input type="radio" id="k" name="plec" required> Kobieta</td><td>
 <input type="radio" id="m" name="plec" required> Mężczyzna</td></tr>
@@ -36,21 +36,44 @@ tr{
 </form>
 -->
 
-<form onsubmit="walidacja(this)">
+<form>
 <table>
-<tr><td>Imię:</td><td> <input type="text" id="imie" required /></td></tr>
+<tr><td>Imię:</td><td> <input type="text" id="imie"/></td></tr>
+<tr><td></td><td><p id="je1"></p></td></tr> 
 <tr><td>Nazwisko:</td><td> <input type="text" id="nazwisko" /></td></tr>
+<tr><td></td><td><p id="je2"></p></td></tr> 
 <tr><td>Email:</td><td> <input type="text" id="email" /></td></tr>
+<tr><td></td><td><p id="je3"></p></td></tr> 
 <tr><td>Hasło:</td><td> <input type="password" id="haslo" /></td></tr>
+<tr><td></td><td><p id="je4"></p></td></tr> 
+<tr><td>Powtórz Hasło:</td><td> <input type="password" id="haslo2" /></td></tr>
+<tr><td></td><td><p id="jedod"></p></td></tr> 
 <tr><td><p>Płeć:<p></td>
-<td><input type="radio" id="kob" name="plec" > Kobieta</td><td>
-<input type="radio" id="men" name="plec" > Mężczyzna</td></tr>
-<tr><td>Telefon:</td><td> <input type="tel" id="telefon" /></td></tr>
+<td><input type="radio" id="kob" name="plec" > Kobieta</td></tr>
+<tr><td></td><td><input type="radio" id="men" name="plec" > Mężczyzna</td></tr>
+<tr><td>Telefon:</td><td> <input type="text" id="telefon" oninput="tyk(this)" /></td></tr>
+<tr><td></td><td><p id="je5"></p></td></tr> 
 <tr><td>Data Urodzenia:</td><td> <input type="date" id="data" /></td></tr>
-<tr><td>Kraj:</td><td> <input type="text" id="kraj" /></td></tr>
-<tr><td></td><td><input type="Submit" value="Zapisz" /></td></tr>
+<tr><td></td><td><p id="je6"></p></td></tr> 
+<tr><td>Kraj:</td><td> <input type="text" id="kraj" oninput="krajj(this)" /></td></tr>
+<tr><td></td><td><p id="je7"></p></td></tr> 
+
+<tr><td>Wojewódstwo</td><td><p id="woj"></p></td></tr>
+<tr><td>Adres zamieszkania</td><td><p id="pierw"><input type='text' id='adresik2' readonly /></p></td></tr>
+<tr><td>Adres korespondencyjny taki sam jak zamieszkania</td><td><input type="checkbox" id="addr" name="addr" checked oninput="klik(this)"></td></tr>
+<tr><td>Adres korespondencyjny</td><td><p id="adr1"></p></td></tr>
+<tr><td></td><td><input type="Submit" value="Zapisz" onclick="walidacjaimie(this),walidacjanazwisko(this),walidacjatelefon(this),walidacjaemail(this),walidacjahaslo(this),walidacjadata(this),pap(this),walidacjahaslo2(this)" /></td></tr>
 </table>
 </form>
+
+
+
+
+
+
+<p id="wal"> </p>
+</form>
+
 </body>
 <script src="script.js"> </script>
 </html>
